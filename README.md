@@ -81,6 +81,10 @@ python3 hardware-lab/kit/build.py hardware-lab/examples/pico-course
 
 Open an issue on GitHub if a course shows something wrong or confusing. Notes on which sentence or picture confused you are the most useful kind.
 
+## Author
+
+Made by Luyao Tang ([@lulouise](https://github.com/lulouise)).
+
 ## Licence
 
 MIT. See [LICENSE](LICENSE). Device names belong to their makers; this project is not connected to any of them.

@@ -71,6 +71,10 @@ python3 hardware-lab/kit/build.py hardware-lab/examples/pico-course
 
 发现哪里讲错了、看不懂，欢迎在 GitHub 上提 issue。最有用的反馈是：具体哪一句话、哪一张图让你困惑。
 
+## 作者
+
+Luyao Tang（[@lulouise](https://github.com/lulouise)）
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。各设备名称归其厂商所有，本项目与这些厂商无关。
