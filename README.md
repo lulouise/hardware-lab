@@ -6,6 +6,14 @@ An agent skill that turns one piece of hardware into a visual course for a compl
 
 You name a device (a Raspberry Pi Pico, an ESP32 board, a robot vacuum, a Mac mini…). Your AI agent researches it, checks the plan with you, and builds one web page you can click through, in English, Chinese or both.
 
+![Chapter 1: the Raspberry Pi Pico in 3D, every part labelled, with the brain chip's card open](docs/en-1-outside.png)
+
+| A hands-on station for each part | A road map of how the parts connect |
+|---|---|
+| ![Chapter 3: turn a knob and see the number the brain reads](docs/en-3-parts.png) | ![Chapter 4: the road map around the brain](docs/en-4-roads.png) |
+
+*From the Pico example course included in this repository.*
+
 ## What a course contains
 
 | # | Chapter | What you see |
