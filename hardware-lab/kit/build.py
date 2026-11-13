@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Join the kit and one course into a single HTML page (no doctype/head/body: the Artifact publish step wraps it).
+"""Join the kit and one course into a single HTML page.
+
+The normal output has no doctype/head/body, for a publishing tool that wraps the page itself.
+With --standalone it also writes a complete HTML file that opens correctly straight from disk.
 
     python3 kit/build.py examples/pico-course
     python3 kit/build.py --check examples/pico-course     also writes <out>.check.html with the layout check built in (see tools/layout-check.js)
+    python3 kit/build.py --standalone examples/pico-course     also writes <out>.standalone.html, a complete file to hand over when nothing publishes the page
 
 The course folder holds:
     course.json   {"name": "Pico Lab", "out": "../pico-course-kit.html"}   (out is relative to the course folder)
@@ -29,7 +33,7 @@ def preflight(course):
         sys.exit("Can't build: these files are missing:\n  " + "\n  ".join(missing))
 
 
-def build(course_dir, check=False):
+def build(course_dir, check=False, standalone=False):
     course = pathlib.Path(course_dir).resolve()
     preflight(course)
     meta = json.loads((course / "course.json").read_text())
@@ -53,11 +57,15 @@ def build(course_dir, check=False):
         test = out.with_name(out.stem + ".check.html")
         test.write_text(page + "\n<script>\n" + tool + "\n</script>\n")
         print(f"wrote {test}: open it in a browser and run: await layoutCheck()")
+    if standalone:
+        full = out.with_name(out.stem + ".standalone.html")
+        full.write_text('<!doctype html>\n<html>\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n</head>\n<body>\n' + page + "</body>\n</html>\n")
+        print(f"wrote {full}: a complete page that opens straight from the file")
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         sys.exit(__doc__)
-    args = [a for a in sys.argv[1:] if a != "--check"]
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
     for d in args:
-        build(d, "--check" in sys.argv)
+        build(d, "--check" in sys.argv, "--standalone" in sys.argv)

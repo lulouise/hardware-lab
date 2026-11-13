@@ -22,7 +22,7 @@ Work in stages and let the learner review each one in the browser before buildin
 4. **Chapters 1–2** (outside, inside) → **review stop 2.**
 5. **Chapters 3–4** (one station per part, the road map) → **review stop 3.**
 6. **Chapters 5–6** (signal stories, a project toward their goal) → **review stop 4.**
-7. **Hand-over.** Give the page (publish it as a private link if you can; otherwise give the HTML file). With the learner's OK, update their learner record.
+7. **Hand-over.** Give the page (publish it as a private link if you can; otherwise give a standalone HTML file: `references/building.md` §6). With the learner's OK, update their learner record.
 
 The four stops are the default. If the learner says "just build it all", build all six chapters, run the full check, and review once at the end.
 

@@ -21,7 +21,7 @@ Make a folder in the learner's project (for example `pico-course/`) with:
 | `model.js` | the numbers model (every size and position in mm) and `COURSE.models` (3D builders) |
 | `views.js` | flat maps and `COURSE.chapters` (pictures, stations, road map, stories, project steps) |
 
-Build: `python3 <skill>/kit/build.py <course-folder>`. The output is one HTML page with no doctype/head/body (an artifact publisher wraps it; it also opens fine as a file in most browsers).
+Build: `python3 <skill>/kit/build.py <course-folder>`. The output is one HTML page with no doctype/head/body, which is what a page-publishing tool expects (it wraps the page itself). `--standalone` also writes `<out>.standalone.html`, a complete file with the text encoding and phone sizing set, for handing over as a file (§6).
 
 **Read `kit/README.md` first**: it documents every field. Then copy the matching part of an example (`examples/pico-course/` for a board, `examples/mac-mini-course/` for a closed device) and change it. Chapters 1–2 first (review stop 2), then add chapters 3–4, then 5–6; until a chapter is built, give it only `id`, `title` and `rail` and it shows greyed out.
 
@@ -85,9 +85,9 @@ Known preview quirks, not bugs in the page:
 - Some tools stop a script after about 45 seconds.
 
 ## 6. Delivering the page
-If an artifact or publishing tool is available, publish the built HTML as a private page and give the learner the link. Otherwise give them the HTML file. Tell them which chapters are built and what the next review stop will cover.
+If you have a tool that publishes a web page as a private link, publish the built HTML and give the learner the link. Otherwise build with `--standalone` and give them the `.standalone.html` file: opened straight from disk, the plain build can show Chinese as broken characters and the wrong size on a phone. Tell them which chapters are built and what the next review stop will cover.
 
 **One place to look, always current.** In testing, the learner saw an old version in the app's preview while the browser showed the new one, and couldn't tell which was right.
-- Republish to the same link after every change you ask the learner to look at, not only at review stops. Don't send them to the local file as well.
-- After republishing, open the artifact again (the tool's `open` action, where there is one) so the app's preview shows the new version.
-- Every build prints its time on the page, under "Sources" in the chapter rail. In your message, say the time of this build, and tell the learner: if the page shows an earlier time, close the preview and open the link again.
+- Republish to the same link (or rebuild the same file) after every change you ask the learner to look at, not only at review stops. Give one place to look, not a link and a file.
+- After republishing, open the page again if your tool has a way to, so any preview the learner has open shows the new version.
+- Every build prints its time on the page, under "Sources" in the chapter rail. In your message, say the time of this build, and tell the learner: if the page shows an earlier time, close it and open the link or file again.

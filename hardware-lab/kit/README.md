@@ -12,7 +12,7 @@ course = facts → parts → 3D model → views      (the kit adds the frame, vi
 python3 kit/build.py examples/pico-course
 ```
 
-The script joins `kit/page.html`, `kit/css/kit.css`, the kit's JavaScript and the course's files into one HTML page (no doctype/head/body: the Artifact publish step wraps it; Three.js r128 comes from cdnjs). The output path is in the course's `course.json`.
+The script joins `kit/page.html`, `kit/css/kit.css`, the kit's JavaScript and the course's files into one HTML page (no doctype/head/body, for a publishing tool that wraps the page itself; add `--standalone` to also get a complete file that opens straight from disk; Three.js r128 comes from cdnjs). The output path is in the course's `course.json`.
 
 ## A course folder
 
