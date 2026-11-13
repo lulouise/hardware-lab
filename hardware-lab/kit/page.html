@@ -1,0 +1,37 @@
+<title>{{NAME}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;700&display=swap">
+<style>
+{{CSS}}
+</style>
+
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand">{{LOGO}}
+      <span class="bname"><b>{{NAME}}</b><span class="tagline" data-t="tagline"></span></span></div>
+  </header>
+  <nav class="chapbar" aria-label="Chapters">
+    <div class="ctabs" id="side"></div>
+    <div class="lang" role="group" aria-label="Language / 语言"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button></div>
+  </nav>
+  <nav class="apprail" id="rail2" aria-label="Chapters">
+    <div class="rail-brand" title="{{NAME}}">{{LOGO}}</div>
+    <ol class="rail-items"></ol>
+    <button class="rail-src" data-srcs data-t="sources"></button><span class="rail-built" data-built></span>
+    <div class="lang rail-lang" role="group" aria-label="Language / 语言"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button></div>
+  </nav>
+  <section class="chapter" id="chapter" aria-live="polite"></section>
+  <dialog class="qdlg srcdlg" id="srcdlg" aria-labelledby="src-title"><div class="qdlg-in"><button class="qclose" data-srcclose aria-label="Close">×</button><h3 id="src-title" data-t="sources"></h3><p data-t="footer"></p><p class="src-built" data-built></p></div></dialog>
+
+  <footer data-t="footer"></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+{{JS}}
+})();
+</script>

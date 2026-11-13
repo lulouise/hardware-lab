@@ -1,0 +1,4 @@
+.DS_Store
+*.check.html
+__pycache__/
+hardware-lab/examples/*/*.html
