@@ -10,7 +10,9 @@
 7. Which devices fit
 
 ## 1. Ask only what isn't known
-Ask one question at a time, in the learner's language, with easy choices plus "something else". Before asking, check what you already know: a learner record (§4), the project's notes, and earlier chat. Don't ask what you can find out; do show your assumptions in the outline so the learner can correct them.
+Ask one question at a time, in the learner's language, with easy choices plus "something else". Before asking, check what you already know: a learner record (§4), the project's notes, and earlier chat. Don't ask what the learner has already told you; do show your assumptions in the outline so the learner can correct them.
+
+**Two things only the learner knows, so you always ask them unless they're already written down:** which exact model they have (or that they want a general version), and why they're learning it. You can look up a device; you can't look up a person. "Ask only what isn't known" never means "ask nothing": without a learner record, your first reply to a new request is a question, and you wait for the answer before researching or building. If your tools let you ask several questions in one message, that's fine; building first and asking afterwards is not.
 
 ## 2. The questions
 1. **What is the thing?** A name, a product link or a photo.
@@ -43,7 +45,7 @@ A file `learner.md` in the learner's own project (template: `assets/learner-temp
 If the record or the project files show a course for this device, don't start over. Offer to **add a direction**: keep chapters 1–4, build only the new direction's chapter 5 stories and chapter 6 project, and review those.
 
 ## 6. The outline for review stop 1
-Show this before building any page. Changing direction here costs nothing; after chapter 2 it costs a lot.
+Show this before building any page, then stop and wait for the learner's answer. Changing direction here costs nothing; after chapter 2 it costs a lot.
 
 - **The device:** exact model (or general version, with the example model whose sizes you'll draw).
 - **Sources** (official first) and the **fact sheet** (`research.md`), with confidence levels; say plainly what you couldn't find.
@@ -54,6 +56,7 @@ Show this before building any page. Changing direction here costs nothing; after
   - each chapter 5 story, with the road families it walks (as many as the device and goal need, not a set number: `chapters.md` §5);
   - the chapter 6 project, with what the learner would add and buy (approximate).
 - **Things the page will mark** as approximate, simulated or unknown.
+- **For a closed device: what you know about the inside layout.** Say which source shows where the parts sit (a maker's exploded drawing, a repair guide, a teardown), or say plainly that you found none. With no source, chapter 2 can't honestly show "where the parts sit": tell the learner it will show "how it flows" instead (`chapters.md` §2), and let them point you to a source if they have one.
 
 ### Say how deep you'll go
 At this stop, name the part that matters most and how you'll open it up ("the M4 chip gets five stations: the chip map, then its CPU, GPU, AI part and memory"), and how many stories and steps you plan and why. The learner can ask for more or less. A complex device treated like a simple one is the most likely reason a learner feels the course is too thin.
